@@ -13,6 +13,8 @@ import TypeIt from "typeit-react";
 import { Dices } from "lucide-react";
 import { Clock2 } from "lucide-react";
 import { IconDashboard, IconDiscount2 } from "@tabler/icons-react";
+import { redirect, useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "next-intl/client";
 
 export default function HomePage() {
   function random() {
@@ -24,6 +26,7 @@ export default function HomePage() {
     ];
     window.location.href = urls[Math.floor(Math.random() * urls.length)];
   }
+
   return (
     <div className="relative flex flex-col min-h-screen bg-indigo-100/50 pb-3 px-4 pt-2 backdrop-blur sm:px-6 sm:pb-20 lg:px-12 xl:pb-6 3xl:px-56 3xl:pt-2.5">
       {/* SEO */}
@@ -88,8 +91,9 @@ export default function HomePage() {
           </span>
           <span>Plans</span>
         </button> */}
+
         <button
-          onClick={random}
+          onClick={() => random()}
           id="test"
           className="flex items-center shadow-xl tracking-wide shadow-gray-200 gap-2 cursor-pointer bg-indigo-200 font-medium rounded-full text-sm px-5 py-5 mid:py-7 mid:px-7 mid:text-base transition duration-700 ease-in-out hover:scale-105 hover:shadow-gray-300/70"
         >

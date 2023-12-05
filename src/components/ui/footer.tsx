@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bitdinosaur from "@/components/imgs/bitdinosaur-logo.png";
 import Link from "next/link";
+import { Tooltip } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 
 export function Footer() {
@@ -34,9 +35,30 @@ export function Footer() {
         >
           
         </Tooltip> */}
-        <div className="ml-1 h-8 w-8 cursor-n-resize">
-          <Image src={bitdinosaur} width={100} height={100} alt="bitdinosaur" />
-        </div>
+        <Tooltip
+          showArrow
+          content={
+            <div className="flex flex-col items-center">
+              <Image
+                src={bitdinosaur}
+                width={100}
+                height={100}
+                alt="bitdinosaur"
+                className="animate-bounce"
+              ></Image>
+              <p className="font-body tracking-wider">BitDinosaur</p>
+            </div>
+          }
+        >
+          <div className="ml-1 h-8 w-8 cursor-n-resize">
+            <Image
+              src={bitdinosaur}
+              width={100}
+              height={100}
+              alt="bitdinosaur"
+            />
+          </div>
+        </Tooltip>
       </div>
 
       <p className="text-center text-xs text-gray-700 xsmall:text-sm">

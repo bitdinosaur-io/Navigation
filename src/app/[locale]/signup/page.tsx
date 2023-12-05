@@ -9,16 +9,10 @@ import Image from "next/image";
 import { useRouter } from "next-intl/client";
 import { ErrorToast, SuccessToast } from "@/components/functions/toasts";
 import LoginApi from "@/api/login";
-import { useCookies } from "react-cookie";
 import Logopic from "@/components/imgs/logo-white.png";
 import illPic from "@/components/imgs/MessyDoodle.svg";
 import SignUpApi from "@/api/signup";
-import SignUpContext from "@/components/functions/context/signupreducer";
 import CountdownTimer from "@/components/functions/countdown";
-import EmailContext from "@/components/functions/context/emailreducer";
-import ActiveContext from "@/components/functions/context/activereducer";
-import LoginContext from "@/components/functions/context/loginreducer";
-import SignUpInfoContext from "@/components/functions/context/signupinforeducer";
 import CheckCodeApi from "@/api/checkcode";
 import Link from "next/link";
 
@@ -43,9 +37,6 @@ const LoginForm = () => {
     formState: { errors },
   } = useForm<SignUpFormInput>();
 
-  const [SignUpisOpen, setSignUpisOpen] = useContext(SignUpContext);
-  const [LoginisOpen, setLoginisOpen] = useContext(LoginContext);
-  const [SignUpInfo, setSignUpInfo] = useContext(SignUpInfoContext);
   const [isDisabled, setIsDisabled] = useState(true);
   const [inputValue, setInputValue] = useState("");
   const [one, setOne] = useState(false);
@@ -76,9 +67,6 @@ const LoginForm = () => {
         if (responseReg.status === 200) {
           setIsLoad(false);
           SuccessToast(t("SignUpSuccessToast"));
-          setSignUpInfo(parmas);
-          setSignUpisOpen(false);
-          setLoginisOpen(true);
         } else if (responseReg.status === 400) {
           ErrorToast(t("SignParameterError"), 8000);
           setIsLoad(false);
@@ -269,7 +257,8 @@ const LoginForm = () => {
                   {isLoad ? (
                     <div className="flex items-center justify-center ">
                       <Loader2
-                        className="animate-spin text-indigo-600"
+                        className="animate-spin text-white"
+                        strokeWidth={2.5}
                         size={20}
                       />
                     </div>
@@ -300,7 +289,7 @@ const LoginForm = () => {
         </div>
       </div>
       <div className="bg-indigo-300/50 rounded-3xl w-full h-full flex flex-col p-16 gap-4">
-        <div className="w-full h-fit text-2xl font-medium tracking-wide leading-relaxed text-indigo-600">
+        <div className="w-full h-fit text-3xl font-medium tracking-wide leading-relaxed text-indigo-600">
           <p>{t("SloganI")}</p>
           <p>{t("SloganII")}</p>
         </div>
