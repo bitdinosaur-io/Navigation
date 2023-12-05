@@ -1,0 +1,189 @@
+{
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, zh {简体中文} en {English} other {Unknown}}"
+  },
+  "Home": {
+    "toptitle": "极致轻巧，操作流畅",
+    "title": "审阅您的风险",
+    "titleII": "授权",
+    "titleIII": "情况",
+    "subtitle": "您的多币种授权记录管理工具。轻松了解授权情况，识别可疑地址",
+    "searchplaceholder": "输入地址以搜索",
+    "more": "了解更多",
+    "why": "我们的优势",
+    "Features": {
+      "FeatureI": "全面的恶意授权地址库",
+      "FeatureISubI": "我们持有一份庞大且完备的恶意授权地址数据库，确保您能迅速、准确地识别任何已被授权的可疑地址",
+      "FeatureII": "支持多授权一键解除",
+      "FeatureIISubI": "轻松解除，一键操作，即可解除与指定合约相关的所有授权。同时，您也可以选择解除单个授权，更加灵活地管理您的数字资产授权",
+      "FeatureIISubII": "* 进行多个授权解除时, 需要手动对单个授权撤销进行确认",
+      "FeatureIII": "多链授权记录",
+      "FeatureIIISubI": "支持ARB、BSC、TRX、ETH等多种币种的授权记录查看，一站式管理您的数字钱包"
+    }
+  },
+  "DetailPage": {
+    "searchplaceholder": "搜索一个新地址",
+    "Empty": "未发现授权记录",
+    "Record": "授权记录",
+    "RiskContart": "此合约包含风险地址",
+    "RiskAddress": "此地址为风险地址",
+    "SaveAddress": "未发现风险地址授权记录",
+    "Column": {
+      "risk": "风险情况",
+      "contract": "代币名称",
+      "receiver": "授权地址",
+      "allowance": "授权金额",
+      "allowance_all": "总授权金额",
+      "allowance_count": "授权地址数量",
+      "revoke": "解除授权",
+      "balance": "余额"
+    },
+    "SubColumn": {
+      "hash": "交易哈希",
+      "amount": "交易金额",
+      "time": "交易时间"
+    },
+    "RevokeDialog": {
+      "title": "解除授权",
+      "subtitle": "您即将解除的合约地址为 :",
+      "warningt": "您将与多个接收者解除授权",
+      "warningb": "操作前请先确认接收者信息",
+      "cancel": "取消",
+      "revoke": "解除"
+    },
+    "Toast": {
+      "SuccessToast": "加载成功",
+      "InvaildWalletToast": "请连接到地址拥有者的钱包以解除授权",
+      "ConnectWalletToast": "请先连接钱包",
+      "InvaildAddress": "地址错误或超时",
+      "Reflesh": "请检查地址或刷新页面"
+    }
+  },
+  "LoginForm": {
+    "loginTitle": "欢迎来到",
+    "loginSubTitle": "登陆以继续",
+    "loginNoAccount": "还没有账号?",
+    "loginNoAccountII": "创建账号",
+    "loginEmail": "邮箱",
+    "loginEmailPlaceholder": "邮箱地址",
+    "loginPassword": "密码",
+    "loginPasswordPlaceholder": "密码",
+    "loginButton": "登陆",
+    "loginRequried": "此项为必填项",
+    "loginSuccessToast": "登陆成功!",
+    "loginFailToast": "登陆失败。 邮箱或密码错误或账户已过期",
+    "SloganI": "创造全面而易用的区块链工具",
+    "SloganII": "让链上数据更具应用价值"
+  },
+  "SignUpForm": {
+    "SignUpTitle": "马上开始",
+    "SignUpSubTitle": "发现寻找区块链数据的更好方法",
+    "SignUpEmail": "邮箱",
+    "SignUpEmailPlaceholder": "请使用纯字母地址",
+    "SignUpEmailLength": "达到最大长度50个字符",
+    "SignUpEmailError": "邮箱格式不正确",
+    "SignUpCode": "验证码",
+    "SignUpCodePlaceholder": "6位验证码",
+    "SignUpPassword": "密码",
+    "SignUpPasswordPlaceholder": "密码",
+    "SignUpPasswordLength": "达到最大长度50个字符",
+    "SignUpConfirmPassword": "确认密码",
+    "SignUpConfirmPasswordPlaceholder": "请再次输入密码",
+    "SignUpConfirmPasswordError": "两次输入密码不一致！",
+    "SignUpButton": "注册",
+    "SignUpAlready": "已经有账号?",
+    "SignUpAlreadyII": "登陆",
+    "SignUpRequried": "此项为必填项",
+    "SignParameterError": "请求参数错误",
+    "SignUpCodeError": "验证码错误",
+    "SignUpServiceError": "当前服务暂时无法使用，请稍后重试",
+    "SignUpSuccessToast": "注册成功!",
+    "CodeCheckError": "验证码错误",
+    "SloganI": "创造全面而易用的区块链工具",
+    "SloganII": "让链上数据更具应用价值"
+  },
+  "GetCode": {
+    "SignUpGetCode": "获取验证码",
+    "Sended": "验证码已发送",
+    "ParameterError": "请求参数错误",
+    "ServiceError": "当前服务暂时无法使用, 请稍后再试"
+  },
+  "Popover": {
+    "Select": "选择钱包",
+    "Account": "账户地址:",
+    "NetworkID": "网络ID:",
+    "Disconnect": "解除连接"
+  },
+  "Menu": {
+    "title": "联系我们"
+  },
+  "Table": {
+    "Empty": "啥也没有哦",
+    "Risk": "只看风险地址"
+  },
+  "Mobile": {
+    "Title": "请使用电脑访问",
+    "SubTitleI": "十分抱歉,我们的服务尚未支持移动设备访问",
+    "SubTitleII": "为了更好的用户体验,请使用电脑等大屏设备访问"
+  },
+  "FooterHome": {
+    "Features": {
+      "title": "特性",
+      "FeatureI": "授权地址库",
+      "FeatureII": "多授权解除",
+      "FeatureIII": "多链记录"
+    },
+    "Help": {
+      "title": "帮助与支持",
+      "contact": "联系我们",
+      "pp": "隐私政策",
+      "tos": "服务条款"
+    },
+    "Slogan": {
+      "SloganI": "创造全面而易用的区块链工具",
+      "SloganII": "让链上数据更具应用价值"
+    }
+  },
+  "Price": {
+    "PlanI": {
+      "name": "Starter",
+      "desc": "适合刚接触加密货币的用户",
+      "Features": {
+        "I": "基础应用",
+        "II": "可监控5个任意链地址",
+        "III": "Sed posuere nisi",
+        "IV": "Pellentesque eu nibh et neque",
+        "V": "Suspendisse a leo",
+        "VI": "Praesent quis venenatis ipsum",
+        "VII": "Duis non diam vel tortor"
+      }
+    },
+    "PlanII": {
+      "name": "Premium",
+      "desc": "适合有加密货币交易经验的用户",
+      "Features": {
+        "I": "基础应用",
+        "II": "可监控1000个任意链地址",
+        "III": "地址可独立设置推送间隔",
+        "IV": "5种工具API",
+        "V": "Suspendisse a leo",
+        "VI": "Praesent quis venenatis ipsum",
+        "VII": "Duis non diam vel tortor"
+      }
+    },
+    "PlanIII": {
+      "name": "Enterprise",
+      "desc": "定制化需求",
+      "Features": {
+        "I": "基础应用",
+        "II": "可监控无限个任意链地址",
+        "III": "地址可独立设置推送间隔",
+        "IV": "5种工具API",
+        "V": "Bot自定义",
+        "VI": "即时推送",
+        "VII": "Duis non diam vel tortor"
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, zh {简体中文} en {English} other {Unknown}}"
+  },
+  "Home": {
+    "toptitle": "Lightweight, Seamless Operation",
+    "title": "Review Your Risk",
+    "titleII": "Approve",
+    "titleIII": "Status",
+    "subtitle": "Your versatile multi-currency approve record management utility. Effortlessly gain insights into approve statuses and identify suspicious addresses",
+    "searchplaceholder": "Search By Address",
+    "more": "Learn more",
+    "why": "Why Choosing Us ?",
+    "Features": {
+      "FeatureI": "Comprehensive Malicious Approval Address Database",
+      "FeatureISubI": "We possess an extensive and complete database of malicious approval addresses, ensuring you can swiftly and accurately identify any suspicious addresses that have been approved",
+      "FeatureII": "One-click Revocation for Multiple Approval",
+      "FeatureIISubI": "Effortlessly terminate, one-click execution, which can release all approve related to the designated contract. At the same time, you can also choose to revoke individual approve, providing a more flexible way to manage your digital asset approve.",
+      "FeatureIISubII": "Note: When revoking multiple approval, you need to manually confirm the revocation of each one.",
+      "FeatureIII": "Multi-Chain Compatibility",
+      "FeatureIIISubI": "View approve records for ARB, BSC, TRX, ETH, and more, all in one place to manage your digital wallet effortlessly"
+    }
+  },
+  "DetailPage": {
+    "searchplaceholder": "Search a new address",
+    "Empty": "A safe account with no approval :)",
+    "Record": "Approve Records",
+    "RiskContart": "This Contract Has Risk Addresses",
+    "RiskAddress": "This is a Risk Address",
+    "SaveAddress": "No risk address approval record found",
+    "Column": {
+      "risk": "Risk Status",
+      "contract": "Contract",
+      "receiver": "Receiver",
+      "allowance": "Allowance",
+      "allowance_all": "Allowance Total",
+      "allowance_count": "Approve Count",
+      "revoke": "Revoke",
+      "balance": "Balance"
+    },
+    "SubColumn": {
+      "hash": "Hash",
+      "amount": "Amount",
+      "time": "Time"
+    },
+    "RevokeDialog": {
+      "title": "Revoke Contract",
+      "subtitle": "You are revoking contract from following address :",
+      "warningt": "You will revoke the contract with multiple spender",
+      "warningb": "Check spender info before any operation.",
+      "cancel": "Cancel",
+      "revoke": "Revoke"
+    },
+    "Toast": {
+      "SuccessToast": "Loading Successfully",
+      "InvaildWalletToast": "Connect to address owner's wallet to revoke approval",
+      "ConnectWalletToast": "Please connect your wallet first",
+      "InvaildAddress": "Invaild Address or Time Out",
+      "Reflesh": "Please Check Address or Reflesh Page"
+    }
+  },
+  "LoginForm": {
+    "loginTitle": "Welcome to",
+    "loginSubTitle": "Sign In to continue",
+    "loginNoAccount": "Don't have an account?",
+    "loginNoAccountII": "Create an new account",
+    "loginEmail": "Email",
+    "loginEmailPlaceholder": "Email",
+    "loginPassword": "Password",
+    "loginPasswordPlaceholder": "Password",
+    "loginButton": "Sign In",
+    "loginRequried": "This field is required",
+    "loginSuccessToast": "Login Success !",
+    "loginFailToast": "Login failed. The email or password is incorrect or the account has expired",
+    "SloganI": "Be a Minimalist and General Blockchain Tool",
+    "SloganII": "Make Encrypted World Data with Application Value"
+  },
+  "SignUpForm": {
+    "SignUpTitle": "Get Started Now",
+    "SignUpSubTitle": "You Can Start Tracking Soon",
+    "SignUpEmail": "Email",
+    "SignUpEmailPlaceholder": "Please use plain letters",
+    "SignUpEmailLength": "Max length 50 exceeded",
+    "SignUpEmailError": "Invaild email address",
+    "SignUpCode": "Verification Code",
+    "SignUpCodePlaceholder": "Six-Digit Code",
+    "SignUpPassword": "Password",
+    "SignUpPasswordPlaceholder": "Password",
+    "SignUpPasswordLength": "Max length 50 exceeded",
+    "SignUpConfirmPassword": "Confirm Password",
+    "SignUpConfirmPasswordPlaceholder": "Input your password again",
+    "SignUpConfirmPasswordError": "Password not match!",
+    "SignUpButton": "Sign Up",
+    "SignUpAlready": "Already have an account?",
+    "SignUpAlreadyII": "Sign In",
+    "SignUpRequried": "This field is required",
+    "SignParameterError": "Request Parameter Error",
+    "SignUpCodeError": "Verification Code Error",
+    "SignUpServiceError": "The service is temporarily unavailable, Please try again later",
+    "SignUpSuccessToast": "Sign Up Success!",
+    "CodeCheckError": "Verification Code Invaild",
+    "SloganI": "Be a Minimalist and General Blockchain Tool",
+    "SloganII": "Make Encrypted World Data with Application Value"
+  },
+  "GetCode": {
+    "SignUpGetCode": "Get Code",
+    "Sended": "Verification Code Sent",
+    "ParameterError": "Request Parameter Error",
+    "ServiceError": "The service is temporarily unavailable, Please try again later"
+  },
+  "Popover": {
+    "Select": "Select Wallet",
+    "Account": "Account:",
+    "NetworkID": "Network ID:",
+    "Disconnect": "Disconnect"
+  },
+  "Menu": {
+    "title": "Contact Us"
+  },
+  "Table": {
+    "Empty": "Nothing Here",
+    "Risk": "Risk Only"
+  },
+  "Mobile": {
+    "Title": "Widescreen Recommended",
+    "SubTitleI": "Sorry, our page was not support mobile device yet.",
+    "SubTitleII": "Please switch to a wider screen for better user experience"
+  },
+  "Price": {
+    "PlanI": {
+      "name": "Starter",
+      "desc": "Best for users who are new to cryptocurrencies",
+      "Features": {
+        "I": "Basic Application",
+        "II": "Monitoring 5 address of any supported chain",
+        "III": "Sed posuere nisi",
+        "IV": "Pellentesque eu nibh et neque",
+        "V": "Suspendisse a leo",
+        "VI": "Praesent quis venenatis ipsum",
+        "VII": "Duis non diam vel tortor"
+      }
+    },
+    "PlanII": {
+      "name": "Premium",
+      "desc": "Best for users with cryptocurrency trading experience",
+      "Features": {
+        "I": "Basic Application",
+        "II": "Monitoring 1000 address of any supported chain",
+        "III": "Addresses can be set independently of the push interval",
+        "IV": "APIs for our 5 tools",
+        "V": "Suspendisse a leo",
+        "VI": "Praesent quis venenatis ipsum",
+        "VII": "Duis non diam vel tortor"
+      }
+    },
+    "PlanIII": {
+      "name": "Enterprise",
+      "desc": "Customized Requirements",
+      "Features": {
+        "I": "Basic Application",
+        "II": "Monitoring Unlimited address of any supported chain",
+        "III": "Addresses can be set independently of the push interval",
+        "IV": "APIs for our 5 tools",
+        "V": "Customized Bot",
+        "VI": "Instant Push",
+        "VII": "Duis non diam vel tortor"
+      }
+    }
+  },
+  "FooterHome": {
+    "Features": {
+      "title": "Featrues",
+      "FeatureI": "Repository",
+      "FeatureII": "Multiple Revoke",
+      "FeatureIII": "Multi-Chain"
+    },
+    "Help": {
+      "title": "Help & Support",
+      "contact": "Contact",
+      "pp": "Privacy Policy",
+      "tos": "Terms Of Service"
+    },
+    "Slogan": {
+      "SloganI": "Be a Minimalist and General Blockchain Tool",
+      "SloganII": "Make Encrypted World Data with Application Value"
+    }
+  }
+}
