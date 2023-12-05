@@ -43,10 +43,12 @@ const LoginForm = () => {
         if (status === 200) {
           setIsLoad(false);
           SuccessToast(t("loginSuccessToast"));
+          localStorage.setItem("email", data.email);
           setCookie("token", res.data.token, {
             path: "/",
             maxAge: 3600, // cookeie 一小时后过期
             domain: "watcher.tools",
+            secure: true,
             sameSite: true,
           });
           const search = searchParams.get("returnUrl");
@@ -57,26 +59,18 @@ const LoginForm = () => {
           }
         } else if (status === 401) {
           setIsLoad(false);
-          // ErrorToast(t("loginFailToast"), 8000);
+          ErrorToast(t("loginFailToast"), 8000);
           alert("fail");
         } else {
           setIsLoad(false);
-          // ErrorToast(res.data.message, 8000);
-          alert("failedddd");
+          ErrorToast(res.data.message, 8000);
+          // alert("failedddd");
         }
       })
       .catch((err) => {});
   };
 
-  function setkkk() {
-    setCookie("token", "test", {
-      path: "/",
-      maxAge: 3600, // cookeie 一小时后过期
-      domain: "google.com",
-      sameSite: true,
-    });
-    console.log("setcookielo");
-  }
+  useEffect;
 
   return (
     <div className="w-full min-h-full flex flex-1 justify-between gap-6">
@@ -181,7 +175,7 @@ const LoginForm = () => {
           <p>{t("SloganI")}</p>
           <p>{t("SloganII")}</p>
         </div>
-        <div className="flex h-full w-full items-center ">
+        <div className="flex h-full w-full items-center 3xl:p-24">
           <Image src={illPic} alt="illPic" />
         </div>
       </div>

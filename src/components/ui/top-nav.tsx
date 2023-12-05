@@ -3,6 +3,7 @@ import Image from "next/image";
 import logopic from "@/components/imgs/logo-4.png";
 import { useState, useEffect } from "react";
 import { Twitter, Send, Mail } from "lucide-react";
+import { useCookies } from "react-cookie";
 import Link from "next/link";
 import {
   Avatar,
@@ -13,10 +14,14 @@ import {
   DropdownItem,
   User,
 } from "@nextui-org/react";
+import { SuccessToast } from "../functions/toasts";
 
 export function TopNav() {
+  const [cookies, setCookie, removeCookie] = useCookies();
+  const [isLogin, setIsLogin] = useState(false);
   const [ScreenWidth, setScreenWidth] = useState(0);
   const [ScreenHeight, setScreenHeight] = useState(0);
+  const [useremail, setUserEmail] = useState<any>(null);
 
   useEffect(() => {
     setScreenWidth(window.screen.width);
@@ -24,6 +29,32 @@ export function TopNav() {
   }, []);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
+
+  function Logingout() {
+    removeCookie("token", {
+      path: "/",
+      domain: "watcher.tools",
+      secure: true,
+      sameSite: true,
+    });
+    SuccessToast("Logout Success");
+    location.reload();
+  }
+
+  useEffect(() => {
+    const token = cookies.token;
+    const email = localStorage.getItem("email");
+
+    setUserEmail(email);
+    if (token) {
+      setIsLogin(true);
+      const email = localStorage.getItem("email");
+
+      setUserEmail(email);
+    } else {
+      return;
+    }
+  }, []);
   return (
     <div className="flex flex-wrap h-full w-full items-center justify-between bg-transparent pl-4 pr-4 py-4 mid:pl-6 dark:bg-light-dark">
       {/* logo+brand */}
@@ -68,7 +99,7 @@ export function TopNav() {
             />
           </Link>
         </div>
-        {/* <div className="w-fit h-full flex items-center">
+        <div className="w-fit h-full flex items-center">
           <Dropdown
             radius="lg"
             classNames={{
@@ -77,13 +108,16 @@ export function TopNav() {
             }}
           >
             <DropdownTrigger>
-              <Avatar
-                isBordered
-                showFallback
-                name="Jane"
-                className="bg-indigo-200 cursor-pointer h-fit"
-                src="https://i.pravatar.cc/150?u=a04258114e29026302d"
-              />
+              {isLogin ? (
+                <Avatar
+                  showFallback
+                  name={useremail}
+                  className="bg-indigo-200 cursor-pointer"
+                  src="https://images.unsplash.com/broken"
+                />
+              ) : (
+                ""
+              )}
             </DropdownTrigger>
             <DropdownMenu
               aria-label="Custom item styles"
@@ -110,31 +144,35 @@ export function TopNav() {
                   className="h-14 gap-2 opacity-100"
                 >
                   <User
-                    name="Junior Garcia"
-                    description="@jrgarciadev"
+                    name={useremail}
+                    description=""
                     classNames={{
                       name: "text-default-600",
                       description: "text-default-500",
                     }}
                     avatarProps={{
+                      showFallback: true,
                       size: "sm",
-                      src: "https://avatars.githubusercontent.com/u/30373425?v=4",
+                      className: "bg-indigo-200",
+                      src: "https://images.unsplash.com/broken",
                     }}
                   />
                 </DropdownItem>
-                <DropdownItem key="dashboard">Dashboard</DropdownItem>
-                <DropdownItem key="settings">Settings</DropdownItem>
+                {/* <DropdownItem key="dashboard">Dashboard</DropdownItem>
+                <DropdownItem key="settings">Settings</DropdownItem> */}
               </DropdownSection>
 
               <DropdownSection aria-label="Help & Feedback">
                 <DropdownItem key="help_and_feedback">
                   Help & Feedback
                 </DropdownItem>
-                <DropdownItem key="logout">Log Out</DropdownItem>
+                <DropdownItem key="logout">
+                  <button onClick={Logingout}>LogOut</button>
+                </DropdownItem>
               </DropdownSection>
             </DropdownMenu>
           </Dropdown>
-        </div> */}
+        </div>
       </div>
     </div>
   );
