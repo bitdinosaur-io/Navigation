@@ -51,6 +51,13 @@ const LoginForm = () => {
             secure: true,
             sameSite: true,
           });
+          setCookie("user", data.email, {
+            path: "/",
+            maxAge: 3600, // cookeie 一小时后过期
+            domain: "watcher.tools",
+            secure: true,
+            sameSite: true,
+          });
           const search = searchParams.get("returnUrl");
           if (!search) {
             router.replace("/");

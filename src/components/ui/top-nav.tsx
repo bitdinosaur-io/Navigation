@@ -37,19 +37,22 @@ export function TopNav() {
       secure: true,
       sameSite: true,
     });
+    removeCookie("user", {
+      path: "/",
+      domain: "watcher.tools",
+      secure: true,
+      sameSite: true,
+    });
     SuccessToast("Logout Success");
     location.reload();
   }
 
   useEffect(() => {
     const token = cookies.token;
-    const email = localStorage.getItem("email");
 
-    setUserEmail(email);
     if (token) {
       setIsLogin(true);
-      const email = localStorage.getItem("email");
-
+      const email = cookies.user;
       setUserEmail(email);
     } else {
       return;
