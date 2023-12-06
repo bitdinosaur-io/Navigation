@@ -49,11 +49,10 @@ export function TopNav() {
 
   useEffect(() => {
     const token = cookies.token;
-
     if (token) {
       setIsLogin(true);
-      const email = cookies.user;
-      setUserEmail(email);
+      const user = cookies.user;
+      setUserEmail(user);
     } else {
       return;
     }
@@ -114,9 +113,9 @@ export function TopNav() {
               {isLogin ? (
                 <Avatar
                   showFallback
-                  name={useremail}
+                  name={useremail && useremail.username}
                   className="bg-indigo-200 cursor-pointer"
-                  src="https://images.unsplash.com/broken"
+                  src="/22"
                 />
               ) : (
                 ""
@@ -147,7 +146,7 @@ export function TopNav() {
                   className="h-14 gap-2 opacity-100"
                 >
                   <User
-                    name={useremail}
+                    name={useremail && useremail.username}
                     description=""
                     classNames={{
                       name: "text-default-600",
@@ -157,7 +156,7 @@ export function TopNav() {
                       showFallback: true,
                       size: "sm",
                       className: "bg-indigo-200",
-                      src: "https://images.unsplash.com/broken",
+                      src: "/22",
                     }}
                   />
                 </DropdownItem>

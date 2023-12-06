@@ -62,8 +62,8 @@ export function Footer() {
       </div>
 
       <p className="text-center text-xs text-gray-700 xsmall:text-sm">
-        Copyright <span className="font-body text-gray-700">©</span> 2022-2023
-        BitDinosaur All Rights Reserved
+        <span className="font-body text-gray-700">©</span> 2022-2023 BitDinosaur
+        All Rights Reserved
       </p>
     </div>
   );
