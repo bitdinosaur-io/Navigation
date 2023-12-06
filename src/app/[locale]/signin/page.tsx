@@ -9,11 +9,11 @@ import Image from "next/image";
 import { useRouter } from "next-intl/client";
 import { ErrorToast, SuccessToast } from "@/components/functions/toasts";
 import LoginApi from "@/api/login";
+import GetUserApi from "@/api/getuser";
 import { useCookies } from "react-cookie";
 import Logopic from "@/components/imgs/logo-white.png";
 import illPic from "@/components/imgs/SprintingDoodle.svg";
 import Link from "next/link";
-// import { useRouter } from "next/router";
 
 interface LoginFormInput {
   email: string;
@@ -36,48 +36,61 @@ const LoginForm = () => {
   const router = useRouter();
 
   const onSubmit: any = async (data: LoginFormInput) => {
-    setIsLoad(true);
-    await LoginApi(data)
-      .then((res: any) => {
-        const { status } = res;
-        if (status === 200) {
-          setIsLoad(false);
-          SuccessToast(t("loginSuccessToast"));
-          localStorage.setItem("email", data.email);
-          setCookie("token", res.data.token, {
-            path: "/",
-            maxAge: 3600, // cookeie 一小时后过期
-            domain: "watcher.tools",
-            secure: true,
-            sameSite: true,
-          });
-          setCookie("user", data.email, {
-            path: "/",
-            maxAge: 3600, // cookeie 一小时后过期
-            domain: "watcher.tools",
-            secure: true,
-            sameSite: true,
-          });
-          const search = searchParams.get("returnUrl");
-          if (!search) {
-            router.replace("/");
+    try {
+      setIsLoad(true);
+      const getlogin = await LoginApi(data);
+      if (getlogin.status === 200) {
+        setCookie("token", getlogin.data.token, {
+          path: "/",
+          maxAge: 3600 * 24 * 7,
+          domain: "watcher.tools",
+          secure: true,
+          sameSite: true,
+        });
+        try {
+          const getuser = await GetUserApi("", getlogin.data.token);
+          if (getuser.status === 200) {
+            setCookie("user", getuser.data, {
+              path: "/",
+              maxAge: 3600 * 24 * 7,
+              domain: "watcher.tools",
+              secure: true,
+              sameSite: true,
+            });
+          } else if (getuser.status === 401) {
+            ErrorToast("Incorrect username or password", 8000);
+          } else if (getuser.status === 500) {
+            ErrorToast(
+              "The service is temporarily unavailable, please try again later",
+              8000
+            );
           } else {
-            router.replace(`${search}`);
+            ErrorToast(getuser.data.message, 8000);
           }
-        } else if (status === 401) {
-          setIsLoad(false);
-          ErrorToast(t("loginFailToast"), 8000);
-          alert("fail");
-        } else {
-          setIsLoad(false);
-          ErrorToast(res.data.message, 8000);
-          // alert("failedddd");
+        } catch (error) {
+          ErrorToast(error, 8000);
         }
-      })
-      .catch((err) => {});
+        setIsLoad(false);
+        SuccessToast(t("loginSuccessToast"));
+        const search = searchParams.get("returnUrl");
+        if (!search) {
+          router.replace("/");
+        } else {
+          router.replace(`${search}`);
+        }
+      } else if (getlogin.status === 401) {
+        setIsLoad(false);
+        ErrorToast(t("loginFailToast"), 8000);
+        alert("fail");
+      } else {
+        setIsLoad(false);
+        ErrorToast(getlogin.data.message, 8000);
+        // alert("failedddd");
+      }
+    } catch (error) {
+      ErrorToast(error, 8000);
+    }
   };
-
-  useEffect;
 
   return (
     <div className="w-full min-h-full flex flex-1 justify-between gap-6">
