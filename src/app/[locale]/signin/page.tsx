@@ -94,10 +94,11 @@ const LoginForm = () => {
 
   return (
     <div className="w-full min-h-full flex flex-1 justify-between gap-6">
-      <div className="bg-indigo-50/70 rounded-3xl w-full h-full flex flex-col justify-between p-16">
+      <div className="bg-indigo-50/70 w-full h-full flex flex-col justify-between p-8 mid:p-16 mid:rounded-3xl">
         <div className="flex h-fit w-14 items-center">
           <Image src={Logopic} alt="LogoPic" />
         </div>
+
         <div className="w-full h-fit flex-col flex gap-8">
           <div className="w-full h-fit flex-col flex gap-6">
             <div className="w-full h-fit text-3xl font-bold">
@@ -190,7 +191,8 @@ const LoginForm = () => {
           </p>
         </div>
       </div>
-      <div className="bg-indigo-300/50 rounded-3xl w-full h-full flex flex-col p-16 gap-4">
+
+      <div className="bg-indigo-300/50 rounded-3xl w-full h-full flex-col p-16 gap-4 hidden mid:flex">
         <div className="w-full h-fit text-3xl font-medium tracking-wide leading-relaxed text-indigo-600">
           <p>{t("SloganI")}</p>
           <p>{t("SloganII")}</p>
