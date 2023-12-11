@@ -64,7 +64,7 @@ export function TopNav() {
         className="flex flex-wrap items-center cursor-pointer"
         onClick={handleOpen}
       >
-        <div className="flex h-13 w-13 items-center xsmall:w-14 xsmall:h-14 mid:h-16 mid:w-16">
+        <div className="flex h-12 w-12 items-center xsmall:w-14 xsmall:h-14 mid:h-16 mid:w-16">
           <Image src={logopic} alt="logo" />
         </div>
         <div className="hidden mid:flex">

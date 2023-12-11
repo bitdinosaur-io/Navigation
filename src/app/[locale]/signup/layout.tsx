@@ -4,7 +4,7 @@ export default function ContactUsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="w-full min-h-screen max-h-screen h-full p-8 flex bg-white">
+    <section className="w-full min-h-screen max-h-screen h-full flex bg-white mid:p-8">
       {children}
     </section>
   );

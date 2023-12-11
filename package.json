@@ -24,7 +24,7 @@
     "react-hook-form": "^7.47.0",
     "react-hot-toast": "^2.4.1",
     "sharp": "^0.32.6",
-    "typeit-react": "^2.6.4"
+    "typeit-react": "^2.7.0"
   },
   "devDependencies": {
     "@types/node": "^20",
