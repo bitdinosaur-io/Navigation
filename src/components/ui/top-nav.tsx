@@ -15,6 +15,11 @@ import {
   User,
 } from "@nextui-org/react";
 import { SuccessToast } from "../functions/toasts";
+import {
+  IconBrandTelegram,
+  IconBrandTwitter,
+  IconMail,
+} from "@tabler/icons-react";
 
 export function TopNav() {
   const [cookies, setCookie, removeCookie] = useCookies();
@@ -68,11 +73,8 @@ export function TopNav() {
           <Image src={logopic} alt="logo" />
         </div>
         <div className="hidden mid:flex">
-          <p className="ml-3 flex font-titbackup text-2xl tracking-tight xsmall:text-test mid:text-3xl font-semibold text-indigo-800">
-            <span className="font-titbackup">W</span>
-            <span className="font-titbackup">atcher</span>
-            {/* <span className="font-normal text-black/50">.</span> */}
-            <span className="font-normal text-gray-600">.tools</span>
+          <p className="ml-3 flex font-chillax text-2xl tracking-tight xsmall:text-test mid:text-3xl font-semibold text-indigo-800">
+            Navigation
           </p>
         </div>
       </div>
@@ -83,21 +85,21 @@ export function TopNav() {
             href="https://twitter.com/bitdinosaurio"
             className=" text-black/80"
           >
-            <Twitter
+            <IconBrandTwitter
               strokeWidth={2.5}
-              size={ScreenHeight && ScreenWidth >= 768 ? 24 : 22}
+              size={ScreenHeight && ScreenWidth >= 768 ? 28 : 24}
             />
           </Link>
           <Link href="https://t.me/BitDinosaurLabs" className=" text-black/80">
-            <Send
+            <IconBrandTelegram
               strokeWidth={2.5}
-              size={ScreenHeight && ScreenWidth >= 768 ? 24 : 22}
+              size={ScreenHeight && ScreenWidth >= 768 ? 28 : 24}
             />
           </Link>
           <Link href="mailto:team@bitdinosaur.io" className=" text-black/80">
-            <Mail
+            <IconMail
               strokeWidth={2.5}
-              size={ScreenHeight && ScreenHeight >= 768 ? 24 : 22}
+              size={ScreenHeight && ScreenWidth >= 768 ? 28 : 24}
             />
           </Link>
         </div>
