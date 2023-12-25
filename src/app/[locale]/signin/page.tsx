@@ -58,12 +58,9 @@ const LoginForm = () => {
               sameSite: true,
             });
           } else if (getuser.status === 401) {
-            ErrorToast("Incorrect username or password", 8000);
+            ErrorToast(t("UserIncorrect"), 8000);
           } else if (getuser.status === 500) {
-            ErrorToast(
-              "The service is temporarily unavailable, please try again later",
-              8000
-            );
+            ErrorToast(t("UserError"), 8000);
           } else {
             ErrorToast(getuser.data.message, 8000);
           }
@@ -81,11 +78,9 @@ const LoginForm = () => {
       } else if (getlogin.status === 401) {
         setIsLoad(false);
         ErrorToast(t("loginFailToast"), 8000);
-        alert("fail");
       } else {
         setIsLoad(false);
         ErrorToast(getlogin.data.message, 8000);
-        // alert("failedddd");
       }
     } catch (error) {
       ErrorToast(error, 8000);

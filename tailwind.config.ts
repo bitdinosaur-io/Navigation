@@ -71,6 +71,13 @@ const config: Config = {
         "light-dark": "#171e2e",
         "sidebar-body": "#F8FAFC",
       },
+      gridTemplateRows: {
+        // Simple 16 row grid
+        "16": "repeat(auto-fill, minmax(0, 1fr))",
+
+        // Complex site-specific row configuration
+        layout: "200px minmax(900px, 1fr) 100px",
+      },
     },
   },
   plugins: [nextui()],

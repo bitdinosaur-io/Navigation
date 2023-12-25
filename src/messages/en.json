@@ -74,7 +74,9 @@
     "loginSuccessToast": "Login Success !",
     "loginFailToast": "Login failed. The email or password is incorrect or the account has expired",
     "SloganI": "Be a Minimalist and General Blockchain Tool",
-    "SloganII": "Make Encrypted World Data with Application Value"
+    "SloganII": "Make Encrypted World Data with Application Value",
+    "UserIncorrect": "Incorrect username or password",
+    "UserError": "The service is temporarily unavailable, please try again later"
   },
   "SignUpForm": {
     "SignUpTitle": "Get Started Now",
