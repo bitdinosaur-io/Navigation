@@ -1,5 +1,5 @@
 # Set Base Images
-FROM node:18
+FROM node:20
 
 # Set Work dir
 WORKDIR /usr/src/app
