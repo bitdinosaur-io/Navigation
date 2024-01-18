@@ -65,12 +65,11 @@ const LoginForm = () => {
       if (responseCheck.status === 200) {
         await SignUpApi(regdata);
         const responseReg = await Promise.resolve(responseCheck);
-        console.log(responseReg, "reg");
         if (responseReg.status === 200) {
           setIsLoad(false);
           SuccessToast(t("SignUpSuccessToast"));
           setTimeout(() => {
-            router.push("/login");
+            router.push("/signin");
           }, 2000);
         } else if (responseReg.status === 400) {
           ErrorToast(t("SignParameterError"), 8000);
