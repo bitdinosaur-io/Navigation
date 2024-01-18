@@ -65,19 +65,19 @@ export function TopNav() {
   return (
     <div className="flex flex-wrap h-full w-full items-center justify-between bg-transparent pl-4 pr-4 py-4 mid:pl-6 dark:bg-light-dark">
       {/* logo+brand */}
-      <div
-        className="flex flex-wrap items-center cursor-pointer"
-        onClick={handleOpen}
-      >
-        <div className="flex h-12 w-12 items-center xsmall:w-14 xsmall:h-14 mid:h-16 mid:w-16">
-          <Image src={logopic} alt="logo" />
+
+      <Link href={"/"}>
+        <div className="flex flex-wrap items-center cursor-pointer">
+          <div className="flex h-12 w-12 items-center xsmall:w-14 xsmall:h-14 mid:h-16 mid:w-16">
+            <Image src={logopic} alt="logo" />
+          </div>
+          <div className="hidden mid:flex">
+            <p className="ml-3 flex font-chillax text-2xl tracking-tight xsmall:text-test mid:text-3xl font-semibold text-indigo-800">
+              Navigation
+            </p>
+          </div>
         </div>
-        <div className="hidden mid:flex">
-          <p className="ml-3 flex font-chillax text-2xl tracking-tight xsmall:text-test mid:text-3xl font-semibold text-indigo-800">
-            Navigation
-          </p>
-        </div>
-      </div>
+      </Link>
 
       <div className="flex items-center h-full gap-4 mid:gap-6">
         <div className="flex items-center gap-4 mid:gap-6">

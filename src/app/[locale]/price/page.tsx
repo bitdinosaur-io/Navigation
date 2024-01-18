@@ -6,10 +6,18 @@ import { Fragment, useEffect } from "react";
 import { redirect } from "next/navigation";
 // import { useTheme } from "next-themes";
 import { TopNav } from "@/components/ui/top-nav";
+import { Footer } from "@/components/ui/Price/footer";
 import { Zap, Check, Rocket, Crown } from "lucide-react";
 import cn from "classnames";
 import { useLocale, useTranslations } from "next-intl";
-import { IconBolt, IconPrism, IconRocket } from "@tabler/icons-react";
+import {
+  IconBolt,
+  IconPlus,
+  IconPrism,
+  IconRocket,
+  IconX,
+} from "@tabler/icons-react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 
 export default function Price() {
   const t = useTranslations("Price");
@@ -59,16 +67,17 @@ export default function Price() {
           <TopNav />
         </div>
       </div>
+
       <section className="pt-4 pb-14">
-        <div className="max-w-screen-xl mx-auto text-gray-600 px-14">
+        <div className="w-full text-gray-600 px-4">
           <div className="relative max-w-xl mx-auto sm:text-center">
-            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-              Start By Picking Your Plan
+            <h3 className="text-gray-800 text-3xl font-semibold sm:text-5xl">
+              A Universal Tool For All Your Needs At Your Price Point
             </h3>
             <div className="mt-3 max-w-xl">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                efficitur consequat nunc.
+                Our Pricing plan are designed to be affordable, flexible, and
+                tallored to your unique needs
               </p>
             </div>
           </div>
@@ -181,6 +190,54 @@ export default function Price() {
           </div>
         </div>
       </section>
+
+      <div className="w-full h-fit flex justify-between items-start px-4 my-24">
+        <div className="w-1/3 h-fit flex flex-col gap-3">
+          <h2 className="font-bold text-4xl">FAQ</h2>
+          <div className="flex flex-col">
+            <p className="font-bold text-lg">Still Need Help ?</p>
+            <p className="font-bold text-lg text-indigo-600">Contact Us</p>
+          </div>
+        </div>
+        <div className="w-2/3 h-fit">
+          <Accordion className="w-full font-bold" fullWidth={true}>
+            <AccordionItem
+              key="1"
+              aria-label="Accordion 1"
+              title="Do I need a credit card to start the trial?"
+              indicator={({ isOpen }) => (isOpen ? <IconX /> : <IconPlus />)}
+              className="font-normal"
+            >
+              No, we don’t ask for your credit card upfront. Using
+              cryptocurrency was recommended.
+            </AccordionItem>
+            <AccordionItem
+              key="2"
+              aria-label="Accordion 2"
+              title="How do I change my plan?"
+              indicator={({ isOpen }) => (isOpen ? <IconX /> : <IconPlus />)}
+              className="font-normal"
+            >
+              You can change your plan in the account settings.
+            </AccordionItem>
+            <AccordionItem
+              key="3"
+              aria-label="Accordion 3"
+              title="Can I cancel a subscription at any time?"
+              indicator={({ isOpen }) => (isOpen ? <IconX /> : <IconPlus />)}
+              className="font-normal"
+            >
+              Yes, absolutely, you can cancel your subscription at any time.
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </div>
+
+      <footer className="flex w-full h-full m-auto flex-wrap">
+        <div className="w-full bottom-0">
+          <Footer />
+        </div>
+      </footer>
     </div>
   );
 }

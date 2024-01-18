@@ -71,6 +71,18 @@ const config: Config = {
         "light-dark": "#171e2e",
         "sidebar-body": "#F8FAFC",
       },
+      boxShadow: {
+        main: "0px 6px 18px rgba(0, 0, 0, 0.04)",
+        light: "0px 4px 4px rgba(0, 0, 0, 0.08)",
+        large: "0px 8px 16px rgba(17, 24, 39, 0.1)",
+        card: "0px 2px 6px rgba(0, 0, 0, 0.06)",
+        title: "0px 6px 16px rgba(0, 0, 0, 0.06)",
+        transaction: "0px 8px 16px rgba(17, 24, 39, 0.06)",
+        expand: "0px 0px 50px rgba(17, 24, 39, 0.2)",
+        drop: "0px 0px 5px #d1d6e11a,0px 0px 10px #c1c8d71a,0px 0px 15px #b2bbcd1a,0px 0px 20px #a2adc31a",
+        button:
+          "0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1)",
+      },
       gridTemplateRows: {
         // Simple 16 row grid
         "16": "repeat(auto-fill, minmax(0, 1fr))",
