@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Twitter, Send, Mail } from "lucide-react";
 import { useCookies } from "react-cookie";
 import Link from "next/link";
+import Avvvatars from "avvvatars-react";
 import {
   Avatar,
   Dropdown,
@@ -113,12 +114,9 @@ export function TopNav() {
           >
             <DropdownTrigger>
               {isLogin ? (
-                <Avatar
-                  showFallback
-                  name={useremail && useremail.username}
-                  className="bg-indigo-200 cursor-pointer"
-                  src="/22"
-                />
+                <button className="w-fit h-fit flex items-center justify-center outline-none border-none focus:outline-none focus:border-none">
+                  <Avvvatars size={40} value="kevin.matr@gamil.com" />
+                </button>
               ) : (
                 ""
               )}
@@ -147,20 +145,15 @@ export function TopNav() {
                   key="profile"
                   className="h-14 gap-2 opacity-100"
                 >
-                  <User
-                    name={useremail && useremail.username}
-                    description=""
-                    classNames={{
-                      name: "text-default-600",
-                      description: "text-default-500",
-                    }}
-                    avatarProps={{
-                      showFallback: true,
-                      size: "sm",
-                      className: "bg-indigo-200",
-                      src: "/22",
-                    }}
-                  />
+                  <div className="flex items-center gap-3">
+                    <Avvvatars
+                      size={40}
+                      value={useremail && useremail.username}
+                    />
+                    <p className="text-ellipsis overflow-hidden">
+                      {useremail && useremail.username}
+                    </p>
+                  </div>
                 </DropdownItem>
                 {/* <DropdownItem key="dashboard">Dashboard</DropdownItem>
                 <DropdownItem key="settings">Settings</DropdownItem> */}
