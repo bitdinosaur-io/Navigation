@@ -23,6 +23,7 @@ export default function HomePage() {
       "https://ens.watcher.tools",
       "https://track.watcher.tools",
       "https://approval.watcher.tools",
+      "https://atomscan.org",
     ];
     window.location.href = urls[Math.floor(Math.random() * urls.length)];
   }
@@ -179,19 +180,19 @@ export default function HomePage() {
             </div>
             <div className="group shadow-xl shadow-gray-200 row-span-1 col-span-2 large:row-span-3 large:col-span-2 flex flex-col px-5 large:px-6 py-5 large:py-7 justify-between rounded-2xl bg-rose-200 w-full h-full transition duration-700 ease-in-out hover:translate-x-1 hover:-translate-y-1 hover:brightness-105 hover:shadow-gray-300/70">
               <div>
-                <p className="font-bold text-sm text-black/60">Tool</p>
+                <p className="font-bold text-sm text-black/60">Service</p>
               </div>
               <div className="flex w-full justify-between">
                 <div className="">
-                  <p className="font-bold text-black/80 mb-1 text-2xl large:text-3xl">
-                    Watch
+                  {/* <p className="font-bold text-black/80 mb-1 text-2xl large:text-3xl">
+                  Tracker
+                  </p> */}
+                  <p className="font-bold text-black/80 text-xl large:text-2xl">
+                    Coming Soon
                   </p>
-                  {/* <p className="font-bold text-black/80 text-xl large:text-2xl">
-                  Coming Soon
-                </p> */}
-                  <p className="font-medium text-sm large:text-base text-black/40 tracking-normal">
-                    Revamping
-                  </p>
+                  {/* <p className="font-medium text-sm large:text-base text-black/40 tracking-normal">
+                  BlockChain Address Tracker
+                  </p> */}
                   {/* <p className="font-medium text-sm large:text-base text-black/40 tracking-normal">
                   Address Monitor
                 </p> */}
@@ -215,6 +216,62 @@ export default function HomePage() {
               <div>
                 <p className="font-bold text-sm text-black/60">Tool</p>
               </div>
+              <div className="flex w-full justify-between">
+                <div>
+                  <p className="font-bold text-2xl large:text-3xl text-black/80 mb-1">
+                    Atomscan
+                  </p>
+                  {/* <p className="font-bold text-black/80 text-xl large:text-2xl">
+                  Coming Soon
+                </p> */}
+                  <p className="font-medium text-black/40 text-sm large:text-base tracking-normal">
+                    Atomicals Explorer
+                  </p>
+                </div>
+                <div className="items-end flex -m-2">
+                  <div className="w-fit h-fit p-2 transition duration-1000 ease-in-out cursor-alias  group-hover:rotate-[45deg] group-hover:bg-gray-400/40 rounded-full ">
+                    <Link href="https://atomscan.org" className="cursor-alias">
+                      <ArrowUpRight />
+                    </Link>
+                  </div>
+                  {/* <div className="w-fit h-fit p-2 transition duration-1000 ease-in-out cursor-not-allowed rounded-full group-hover:bg-gray-400/40">
+                  <Link href="/" className="group-hover:hidden">
+                    <ArrowUpRight />
+                  </Link>
+                  <Clock2 className="hidden group-hover:flex" />
+                </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="group shadow-xl shadow-gray-200 row-span-1 col-span-4 large:row-span-3 large:col-span-3 flex flex-col px-5 large:px-6 py-5 large:py-7 justify-between rounded-2xl bg-emerald-300/50 w-full h-full transition duration-700 ease-in-out hover:translate-x-1 hover:-translate-y-1 hover:brightness-105 hover:shadow-gray-300/70">
+              <div>
+                <p className="font-bold text-sm text-black/60">Tool</p>
+              </div>
+              <div className="flex w-full justify-between">
+                <div className="">
+                  <p className="font-bold text-2xl large:text-3xl text-black/80 mb-1">
+                    ENS
+                  </p>
+                  <p className="font-medium text-black/40 text-sm large:text-base tracking-normal">
+                    ENS Analyze Tool
+                  </p>
+                </div>
+                <div className="items-end flex -m-2">
+                  <div className="w-fit h-fit p-2 transition duration-1000 ease-in-out cursor-alias  group-hover:rotate-[45deg] group-hover:bg-gray-400/40 rounded-full ">
+                    <Link
+                      href="https://ens.watcher.tools"
+                      className="cursor-alias"
+                    >
+                      <ArrowUpRight />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="group shadow-xl shadow-gray-200 row-span-1 col-span-4 large:row-span-3 large:col-span-3 flex flex-col px-5 large:px-6 py-5 large:py-7 justify-between rounded-2xl bg-amber-200 w-full h-full  large:min-h-[8rem] large:h-full transition duration-700 ease-in-out hover:translate-x-1 hover:-translate-y-1 hover:brightness-105 hover:shadow-gray-300/70">
+              <h2>
+                <p className="font-bold text-sm text-black/60">Tool</p>
+              </h2>
               <div className="flex w-full justify-between">
                 <div>
                   <p className="font-bold text-2xl large:text-3xl text-black/80 mb-1">
@@ -242,60 +299,6 @@ export default function HomePage() {
                   </Link>
                   <Clock2 className="hidden group-hover:flex" />
                 </div> */}
-                </div>
-              </div>
-            </div>
-            <div className="group shadow-xl shadow-gray-200 row-span-1 col-span-4 large:row-span-4 large:col-span-3 flex flex-col px-5 large:px-6 py-5 large:py-7 justify-between rounded-2xl bg-emerald-300/50 w-full h-full transition duration-700 ease-in-out hover:translate-x-1 hover:-translate-y-1 hover:brightness-105 hover:shadow-gray-300/70">
-              <div>
-                <p className="font-bold text-sm text-black/60">Tool</p>
-              </div>
-              <div className="flex w-full justify-between">
-                <div className="">
-                  <p className="font-bold text-2xl large:text-3xl text-black/80 mb-1">
-                    ENS
-                  </p>
-                  <p className="font-medium text-black/40 text-sm large:text-base tracking-normal">
-                    ENS Analyze Tool
-                  </p>
-                </div>
-                <div className="items-end flex -m-2">
-                  <div className="w-fit h-fit p-2 transition duration-1000 ease-in-out cursor-alias  group-hover:rotate-[45deg] group-hover:bg-gray-400/40 rounded-full ">
-                    <Link
-                      href="https://ens.watcher.tools"
-                      className="cursor-alias"
-                    >
-                      <ArrowUpRight />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="group shadow-xl shadow-gray-200 row-span-1 col-span-4 large:row-span-2 large:col-span-3 flex flex-col px-5 large:px-6 py-5 large:py-7 justify-between rounded-2xl bg-amber-200 w-full h-full  large:min-h-[8rem] large:h-full transition duration-700 ease-in-out hover:translate-x-1 hover:-translate-y-1 hover:brightness-105 hover:shadow-gray-300/70">
-              <div>
-                <p className="font-bold text-sm text-black/60">Service</p>
-              </div>
-              <div className="flex w-full justify-between">
-                <div className="">
-                  {/* <p className="font-bold text-xl large:text-2xl text-black/80">
-                  Authentication
-                </p> */}
-                  <p className="font-bold text-black/80 text-xl large:text-2xl">
-                    Coming Soon
-                  </p>
-                  {/* <p className="font-medium text-black/40 tracking-normal text-sm large:text-base">All-In-One BlockChain Analyst</p> */}
-                </div>
-                <div className="items-end flex -m-2">
-                  {/* <div className="w-fit h-fit p-2 transition duration-1000 ease-in-out cursor-alias  group-hover:rotate-[45deg] group-hover:bg-gray-400/40 rounded-full ">
-                  <Link href="https://ord.watcher.tools">
-                    <ArrowUpRight />
-                  </Link>
-                </div> */}
-                  <div className="w-fit h-fit p-2 transition duration-1000 ease-in-out cursor-not-allowed  rounded-full group-hover:bg-gray-400/40">
-                    <Link href="/" className="group-hover:hidden">
-                      <ArrowUpRight />
-                    </Link>
-                    <Clock2 className="hidden group-hover:flex" />
-                  </div>
                 </div>
               </div>
             </div>
